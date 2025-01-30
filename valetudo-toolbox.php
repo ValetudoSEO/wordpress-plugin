@@ -21,6 +21,17 @@ function valetudo_toolbox_menu() {
     );
 }
 
+function valetudo_toolbox_admin_notices() {
+    ?>
+    <div class="notice notice-warning is-dismissible">
+        <p><strong>Attention :</strong> L'accès aux webhooks est restreint par IP pour assurer la sécurité. Assurez-vous que votre IP est autorisée à exécuter ces scripts.</p>
+    </div>
+    <?php
+}
+
+add_action('admin_notices', 'valetudo_toolbox_admin_notices');
+
+
 function valetudo_toolbox_page_content() {
     ?>
     <div class="wrap">
